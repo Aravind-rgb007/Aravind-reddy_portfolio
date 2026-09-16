@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind Reddy | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: #111827;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #38bdf8;
+        }
+
+        .about,
+        .education,
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .about p,
+        .education p,
+        .project p {
+            color: #cbd5e1;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111827;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm <span>Aravind Reddy</span></h1>
+
+        <p>
+            BCA (Artificial Intelligence) Student |
+            Aspiring Software Developer
+        </p>
+
+        <div>
+            <a class="btn" href="#projects">View My Projects</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am a BCA (Artificial Intelligence) student at
+                SDHR Degree and PG College, currently pursuing my degree
+                from 2024 to 2027. I am interested in software development
+                and enjoy learning programming, web technologies and
+                problem-solving.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">C</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="education">
+            <h3>BCA (Artificial Intelligence)</h3>
+            <p>SDHR Degree and PG College</p>
+            <p>2024 – 2027</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                A responsive personal portfolio website created using
+                HTML, CSS and JavaScript to showcase my skills,
+                education and future projects.
+            </p>
+            <br>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project">
+            <h3>More Projects Coming Soon</h3>
+            <p>
+                I am currently working on developing more projects
+                to improve my programming and software development skills.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div class="about">
+            <p>
+                I am open to internships, learning opportunities and
+                entry-level software development opportunities.
+            </p>
+
+            <br>
+
+            <a class="btn"
+               href="https://www.linkedin.com/"
+               target="_blank">
+               LinkedIn
+            </a>
+
+            <a class="btn secondary"
+               href="https://github.com/"
+               target="_blank">
+               GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Aravind Reddy | Portfolio
+    </footer>
+
+</body>
+      </html>
