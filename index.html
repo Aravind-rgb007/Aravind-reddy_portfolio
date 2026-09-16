@@ -1,373 +1,403 @@
-
-            <a class="btn"
-               href="https://www.linkedin.com/"
-               target="_blank">
-                LinkedIn
-            </a><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aravind Reddy | Software Developer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050d15;
+    color:#f8fafc;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 7%;
+
+    background:rgba(5,13,21,.96);
+    border-bottom:1px solid #163247;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo-mark{
+    font-size:25px;
+    color:#2196f3;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:80px 7%;
+
+    background:
+    radial-gradient(circle at 80% 35%,
+    rgba(0,150,255,.16),
+    transparent 32%),
+    radial-gradient(circle at 20% 80%,
+    rgba(0,100,200,.08),
+    transparent 30%);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(#123047 1px,transparent 1px),
+    linear-gradient(90deg,#123047 1px,transparent 1px);
+
+    background-size:50px 50px;
+    opacity:.12;
+}
 
-    <title>Aravind Reddy | BCA AI Student</title>
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
 
-    <meta name="description"
-          content="Aravind Reddy - BCA Artificial Intelligence student and aspiring Software Developer.">
+.tag{
+    display:inline-block;
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    border:1px solid #1e4b67;
+    border-radius:30px;
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #06111b;
-            color: #f8fafc;
-            line-height: 1.6;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 18px 7%;
-
-            background: rgba(6, 17, 27, 0.95);
-            border-bottom: 1px solid #183044;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #38bdf8;
-        }
-
-        .logo span {
-            color: white;
-        }
+    padding:8px 20px;
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
+    color:#7dd3fc;
+    letter-spacing:3px;
+    font-size:12px;
 
-        nav ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 90vh;
-
-            display: flex;
-            align-items: center;
-
-            padding: 80px 7%;
-
-            background:
-                radial-gradient(circle at 80% 40%,
-                rgba(14, 165, 233, 0.15),
-                transparent 35%),
-                #06111b;
-        }
+    margin-bottom:25px;
+}
 
-        .hero-content {
-            max-width: 900px;
-        }
+.hero h1{
+    font-size:clamp(50px,9vw,90px);
+    line-height:1;
+    margin-bottom:25px;
+}
 
-        .tag {
-            display: inline-block;
-
-            padding: 8px 18px;
+.hero h1 span{
+    color:#2196f3;
+}
 
-            border: 1px solid #1e4660;
-            border-radius: 30px;
+.headline{
+    max-width:900px;
+    font-size:clamp(19px,3vw,27px);
+    color:#e2e8f0;
+    margin-bottom:20px;
+}
 
-            color: #7dd3fc;
+.description{
+    max-width:700px;
+    color:#94a3b8;
+    font-size:17px;
+    margin-bottom:30px;
+}
 
-            font-size: 13px;
-            letter-spacing: 2px;
+/* BUTTONS */
 
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(45px, 8vw, 85px);
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: #2196f3;
-        }
-
-        .headline {
-            font-size: clamp(18px, 3vw, 25px);
-            color: #e2e8f0;
-            max-width: 900px;
-            margin-bottom: 20px;
-        }
-
-        .description {
-            max-width: 700px;
-            color: #94a3b8;
-            font-size: 17px;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 13px 25px;
-
-            border-radius: 30px;
-
-            text-decoration: none;
-            font-weight: bold;
-
-            background: #2196f3;
-            color: white;
-
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #2196f3;
-            color: #38bdf8;
-        }
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
 
-        /* SOCIAL */
-
-        .social {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
+.btn{
+    display:inline-block;
 
-        .social a {
-            width: 45px;
-            height: 45px;
+    padding:13px 25px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border-radius:30px;
 
-            border: 1px solid #1e4660;
-            border-radius: 50%;
+    background:#2196f3;
+    color:white;
 
-            color: #cbd5e1;
-            text-decoration: none;
+    text-decoration:none;
+    font-weight:bold;
 
-            transition: 0.3s;
-        }
+    transition:.3s;
+}
 
-        .social a:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-            transform: translateY(-3px);
-        }
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(33,150,243,.3);
+}
 
-        /* SECTIONS */
+.btn-outline{
+    background:transparent;
+    border:1px solid #2196f3;
+    color:#38bdf8;
+}
 
-        section {
-            padding: 80px 7%;
-            max-width: 1200px;
-            margin: auto;
-        }
+/* SOCIAL */
 
-        .section-title {
-            color: #38bdf8;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
+.social{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
 
-        .section-subtitle {
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
+.social a{
+    width:45px;
+    height:45px;
 
-        /* CARDS */
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+    border:1px solid #21445b;
+    border-radius:50%;
 
-        .card {
-            background: #0b1b29;
+    color:#cbd5e1;
+    text-decoration:none;
 
-            border: 1px solid #183044;
-            border-radius: 15px;
+    transition:.3s;
+}
 
-            padding: 30px;
+.social a:hover{
+    color:#38bdf8;
+    border-color:#38bdf8;
+    transform:translateY(-3px);
+}
 
-            transition: 0.3s;
-        }
+/* SECTIONS */
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #2196f3;
-        }
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 7%;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: #f8fafc;
-        }
+.section-title{
+    font-size:34px;
+    margin-bottom:12px;
+}
 
-        .card p {
-            color: #94a3b8;
-        }
+.section-title span{
+    color:#2196f3;
+}
 
-        /* SKILLS */
+.section-description{
+    color:#94a3b8;
+    margin-bottom:30px;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+/* CARDS */
 
-        .skill {
-            padding: 12px 20px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
 
-            background: #0b1b29;
-            border: 1px solid #183044;
+.card{
+    background:#091824;
 
-            border-radius: 8px;
+    border:1px solid #163247;
+    border-radius:16px;
 
-            color: #cbd5e1;
-        }
+    padding:30px;
 
-        .skill:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-        }
+    transition:.3s;
+}
 
-        /* PROJECTS */
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#2196f3;
+}
 
-        .project-card {
-            background: #0b1b29;
-            border: 1px solid #183044;
+.card h3{
+    margin-bottom:10px;
+}
 
-            padding: 30px;
-            border-radius: 15px;
+.card p{
+    color:#94a3b8;
+}
 
-            margin-bottom: 20px;
-        }
+/* SKILLS */
 
-        .project-card h3 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
 
-        .project-card p {
-            color: #94a3b8;
-        }
+.skill{
+    background:#091824;
 
-        .tech {
-            margin-top: 15px;
-            color: #cbd5e1;
-            font-size: 14px;
-        }
+    border:1px solid #1a4057;
+    border-radius:10px;
 
-        /* CONTACT */
+    padding:13px 22px;
 
-        .contact-box {
-            text-align: center;
+    color:#cbd5e1;
 
-            background: #0b1b29;
-            border: 1px solid #183044;
+    transition:.3s;
+}
 
-            padding: 50px 25px;
+.skill:hover{
+    color:#38bdf8;
+    border-color:#2196f3;
+    transform:translateY(-3px);
+}
 
-            border-radius: 20px;
-        }
+/* PROJECTS */
 
-        .contact-box p {
-            color: #94a3b8;
-            margin-bottom: 25px;
-        }
+.project{
+    background:#091824;
 
-        /* FOOTER */
+    border:1px solid #163247;
+    border-radius:16px;
 
-        footer {
-            text-align: center;
+    padding:30px;
+    margin-bottom:20px;
 
-            padding: 30px;
+    transition:.3s;
+}
 
-            background: #040c13;
-            color: #64748b;
+.project:hover{
+    border-color:#2196f3;
+    transform:translateY(-4px);
+}
 
-            border-top: 1px solid #183044;
-        }
+.project h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
 
-        /* MOBILE */
+.project p{
+    color:#94a3b8;
+}
 
-        @media (max-width: 700px) {
+.project-tech{
+    margin-top:15px;
+    color:#cbd5e1;
+    font-size:14px;
+}
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
+/* CONTACT */
 
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+.contact{
+    text-align:center;
+}
 
-            .hero {
-                min-height: 80vh;
-                padding-top: 60px;
-            }
+.contact-box{
+    background:#091824;
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+    border:1px solid #163247;
+    border-radius:20px;
 
-            .hero h1 {
-                font-size: 48px;
-            }
+    padding:55px 25px;
+}
 
-            .headline {
-                font-size: 19px;
-            }
+.contact-box p{
+    color:#94a3b8;
+    margin-bottom:25px;
+}
 
-            section {
-                padding: 60px 6%;
-            }
-        }
-    </style>
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+
+    background:#03080d;
+    border-top:1px solid #163247;
+
+    color:#64748b;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:13px;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero{
+        min-height:85vh;
+        padding-top:60px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .headline{
+        font-size:20px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:65px 6%;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -377,10 +407,11 @@
 <nav>
 
     <div class="logo">
-        AR <span>Aravind Reddy</span>
+        <div class="logo-mark">AR</div>
+        <div>Aravind Reddy</div>
     </div>
 
-    <ul>
+    <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -396,58 +427,56 @@
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="tag">
-            HELLO, I'M
-        </div>
+    <div class="tag">
+        HELLO, I'M
+    </div>
 
-        <h1>
-            Aravind <span>Reddy</span>
-        </h1>
+    <h1>
+        Aravind <span>Reddy</span>
+    </h1>
 
-        <p class="headline">
-            BCA (Artificial Intelligence) Student |
-            Python | SQL | AI | Web Development |
-            Open to Entry-Level Opportunities and Internship
-        </p>
+    <p class="headline">
+        BCA (Artificial Intelligence) Student |
+        Python | SQL | AI | Web Development |
+        Open to Entry-Level Opportunities and Internship
+    </p>
 
-        <p class="description">
-            I am an aspiring Software Developer passionate about
-            programming, web development, artificial intelligence
-            and continuous learning. I am currently building my
-            technical skills and developing practical projects.
-        </p>
+    <p class="description">
+        Aspiring Software Developer passionate about programming,
+        web development, artificial intelligence and continuous
+        learning. Currently building practical projects and
+        strengthening my technical skills.
+    </p>
 
-        <div class="buttons">
+    <div class="buttons">
 
-            <a href="#projects" class="btn">
-                View My Projects
-            </a>
+        <a href="#projects" class="btn">
+            View My Projects
+        </a>
 
-            <a href="#contact" class="btn btn-outline">
-                Contact Me
-            </a>
-
-        </div>
-
-        <div class="social">
-
-            <!-- Replace these links with your real profiles -->
-
-            <a href="https://www.linkedin.com/in/aravind-reddy-6b35a1384"
-                 target="_blank">
-                 in
-            </a>
-
-            <a href="https://github.com/Aravind-rgb007"
-               target="_blank">
-                GH
-            </a>
-
-        </div>
+        <a href="#contact" class="btn btn-outline">
+            Contact Me
+        </a>
 
     </div>
+
+    <div class="social">
+
+        <a href="https://www.linkedin.com/in/aravind-reddy-6b35a1384"
+           target="_blank">
+            in
+        </a>
+
+        <a href="https://github.com/Aravind-rgb007"
+           target="_blank">
+            GH
+        </a>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -456,34 +485,33 @@
 
 <section id="about">
 
-    <h2 class="section-title">
-        About Me
-    </h2>
+<h2 class="section-title">
+    About <span>Me</span>
+</h2>
 
-    <p class="section-subtitle">
-        A BCA (Artificial Intelligence) student preparing
-        for a career in software development.
-    </p>
+<p class="section-description">
+    BCA (Artificial Intelligence) student preparing for a career
+    in software development.
+</p>
 
-    <div class="card">
+<div class="card">
 
-        <p>
-            I am Aravind Reddy, currently pursuing BCA
-            (Artificial Intelligence) at SDHR Degree and PG
-            College from 2024 to 2027.
-        </p>
+<p>
+    I am Aravind Reddy, currently pursuing BCA
+    (Artificial Intelligence) at SDHR Degree and PG College
+    from 2024 to 2027.
+</p>
 
-        <br>
+<br>
 
-        <p>
-            I have an interest in software development,
-            Python programming, SQL, artificial intelligence
-            and web development. I enjoy learning new
-            technologies and improving my problem-solving
-            skills through practical projects.
-        </p>
+<p>
+    I am interested in software development, Python,
+    SQL, artificial intelligence and web development.
+    I enjoy learning new technologies and improving my
+    problem-solving skills through practical projects.
+</p>
 
-    </div>
+</div>
 
 </section>
 
@@ -492,29 +520,27 @@
 
 <section id="skills">
 
-    <h2 class="section-title">
-        Technical Skills
-    </h2>
+<h2 class="section-title">
+    Technical <span>Skills</span>
+</h2>
 
-    <p class="section-subtitle">
-        Technologies I am currently learning and working with.
-    </p>
+<p class="section-description">
+    Technologies and programming skills I am currently learning
+    and working with.
+</p>
 
-    <div class="skills">
+<div class="skills">
 
-        <div class="skill">C</div>
+    <div class="skill">C</div>
+    <div class="skill">Python</div>
+    <div class="skill">SQL</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">AI Fundamentals</div>
+    <div class="skill">Web Development</div>
 
-        <div class="skill">Python</div>
-
-        <div class="skill">HTML</div>
-
-        <div class="skill">CSS</div>
-
-        <div class="skill">JavaScript</div>
-
-        <div class="skill">SQL</div>
-
-    </div>
+</div>
 
 </section>
 
@@ -523,46 +549,47 @@
 
 <section id="education">
 
-    <h2 class="section-title">
-        Education
-    </h2>
+<h2 class="section-title">
+    <span>Education</span>
+</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <h3>
-                BCA (Artificial Intelligence)
-            </h3>
+    <h3>
+        BCA (Artificial Intelligence)
+    </h3>
 
-            <p>
-                SDHR Degree and PG College
-            </p>
+    <p>
+        SDHR Degree and PG College
+    </p>
 
-            <p>
-                2024 – 2027
-            </p>
+    <p>
+        2024 – 2027
+    </p>
 
-        </div>
+</div>
 
-        <div class="card">
 
-            <h3>
-                Career Goal
-            </h3>
+<div class="card">
 
-            <p>
-                Aspiring Software Developer
-            </p>
+    <h3>
+        Career Goal
+    </h3>
 
-            <p>
-                Interested in software development,
-                AI and web technologies.
-            </p>
+    <p>
+        Aspiring Software Developer
+    </p>
 
-        </div>
+    <p>
+        Interested in software development,
+        AI and web technologies.
+    </p>
 
-    </div>
+</div>
+
+</div>
 
 </section>
 
@@ -571,103 +598,99 @@
 
 <section id="projects">
 
-    <h2 class="section-title">
-        Projects
-    </h2>
+<h2 class="section-title">
+    My <span>Projects</span>
+</h2>
 
-    <p class="section-subtitle">
-        Practical projects I have built and am currently developing.
+<p class="section-description">
+    Projects I have built while developing my programming
+    and software development skills.
+</p>
+
+
+<div class="project">
+
+    <h3>
+        Personal Portfolio Website
+    </h3>
+
+    <p>
+        A responsive personal portfolio website created to
+        showcase my education, technical skills, projects
+        and career interests.
     </p>
 
+    <p class="project-tech">
+        <strong>Technologies:</strong>
+        HTML, CSS, JavaScript, GitHub Pages
+    </p>
 
-    <div class="project-card">
-
-        <h3>
-            Personal Portfolio Website
-        </h3>
-
-        <p>
-            A responsive personal portfolio website created
-            to showcase my education, technical skills,
-            projects and career interests.
-        </p>
-
-        <p class="tech">
-            <strong>Technologies:</strong>
-            HTML, CSS, JavaScript, GitHub Pages
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="project-card">
+<div class="project">
 
-        <h3>
-            Future Project — Expense Tracker
-        </h3>
+    <h3>
+        Expense Tracker
+    </h3>
 
-        <p>
-            A beginner-friendly application planned for
-            tracking income and expenses while improving
-            my JavaScript and programming skills.
-        </p>
+    <p>
+        A planned web application for tracking income and
+        expenses. This project will be developed as part of
+        my learning journey in JavaScript and web development.
+    </p>
 
-        <p class="tech">
-            <strong>Status:</strong>
-            Coming Soon
-        </p>
+    <p class="project-tech">
+        <strong>Status:</strong> Coming Soon
+    </p>
 
-    </div>
+</div>
+
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="contact">
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
+<h2 class="section-title">
+    Let's <span>Connect</span>
+</h2>
 
-        <p>
-            I am open to internships, entry-level opportunities
-            and learning opportunities in software development.
-        </p>
+<p>
+    I am open to internships, entry-level opportunities
+    and learning opportunities in software development.
+</p>
 
-        <div class="buttons">
+<div class="buttons">
 
-            <!-- Replace with your actual LinkedIn URL -->
+    <a class="btn"
+       href="https://www.linkedin.com/in/aravind-reddy-6b35a1384"
+       target="_blank">
+        LinkedIn
+    </a>
 
-            <a class="btn"
-              href="https://www.linkedin.com/in/aravind-reddy-6b35a1384"
-              target="_blank">
-              LinkedIn
-            </a>
+    <a class="btn btn-outline"
+       href="https://github.com/Aravind-rgb007"
+       target="_blank">
+        GitHub
+    </a>
 
-            <a class="btn btn-outline"
-               href="https://github.com/Aravind-rgb007"
-               target="_blank">
-                GitHub
-            </a>
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-    © 2026 Aravind Reddy | BCA (Artificial Intelligence)
+© 2026 Aravind Reddy | BCA (Artificial Intelligence)
 
 </footer>
 
-
 </body>
-    </html>
+                        </html>
