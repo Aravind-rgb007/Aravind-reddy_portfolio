@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aravind Reddy | Portfolio</title>
+
+    <title>Aravind Reddy | BCA AI Student</title>
+
+    <meta name="description"
+          content="Aravind Reddy - BCA Artificial Intelligence student and aspiring Software Developer.">
 
     <style>
         * {
@@ -14,98 +18,233 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #06111b;
             color: #f8fafc;
             line-height: 1.6;
         }
 
+        /* NAVIGATION */
+
         nav {
             position: sticky;
             top: 0;
-            background: #111827;
-            padding: 15px;
-            text-align: center;
-            z-index: 100;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(6, 17, 27, 0.95);
+            border-bottom: 1px solid #183044;
         }
 
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
             color: #38bdf8;
         }
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 70px 20px;
+        .logo span {
+            color: white;
         }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
 
         .hero {
             min-height: 90vh;
+
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
+            align-items: center;
+
+            padding: 80px 7%;
+
+            background:
+                radial-gradient(circle at 80% 40%,
+                rgba(14, 165, 233, 0.15),
+                transparent 35%),
+                #06111b;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border: 1px solid #1e4660;
+            border-radius: 30px;
+
+            color: #7dd3fc;
+
+            font-size: 13px;
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
+            font-size: clamp(45px, 8vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
-            color: #38bdf8;
+            color: #2196f3;
         }
 
-        .hero p {
-            color: #cbd5e1;
-            font-size: 19px;
-            margin-bottom: 25px;
+        .headline {
+            font-size: clamp(18px, 3vw, 25px);
+            color: #e2e8f0;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            max-width: 700px;
+            color: #94a3b8;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .btn {
             display: inline-block;
-            background: #38bdf8;
-            color: #0f172a;
-            padding: 12px 22px;
-            border-radius: 8px;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
             text-decoration: none;
             font-weight: bold;
-            margin: 5px;
+
+            background: #2196f3;
+            color: white;
+
+            transition: 0.3s;
         }
 
-        .btn.secondary {
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+        }
+
+        .btn-outline {
             background: transparent;
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-        }
-
-        h2 {
-            font-size: 30px;
-            margin-bottom: 25px;
+            border: 1px solid #2196f3;
             color: #38bdf8;
         }
 
-        .about,
-        .education,
-        .project {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
+        /* SOCIAL */
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
         }
 
-        .about p,
-        .education p,
-        .project p {
+        .social a {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #1e4660;
+            border-radius: 50%;
+
             color: #cbd5e1;
+            text-decoration: none;
+
+            transition: 0.3s;
         }
+
+        .social a:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 7%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            color: #38bdf8;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #0b1b29;
+
+            border: 1px solid #183044;
+            border-radius: 15px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #2196f3;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        /* SKILLS */
 
         .skills {
             display: flex;
@@ -114,27 +253,113 @@
         }
 
         .skill {
-            background: #1e293b;
-            padding: 12px 18px;
+            padding: 12px 20px;
+
+            background: #0b1b29;
+            border: 1px solid #183044;
+
             border-radius: 8px;
-            border: 1px solid #334155;
+
+            color: #cbd5e1;
         }
 
-        footer {
-            text-align: center;
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* PROJECTS */
+
+        .project-card {
+            background: #0b1b29;
+            border: 1px solid #183044;
+
             padding: 30px;
-            background: #111827;
+            border-radius: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
             color: #94a3b8;
         }
 
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 34px;
+        .tech {
+            margin-top: 15px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            text-align: center;
+
+            background: #0b1b29;
+            border: 1px solid #183044;
+
+            padding: 50px 25px;
+
+            border-radius: 20px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #040c13;
+            color: #64748b;
+
+            border-top: 1px solid #183044;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
             }
 
-            nav a {
-                margin: 0 5px;
-                font-size: 12px;
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding-top: 60px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .headline {
+                font-size: 19px;
+            }
+
+            section {
+                padding: 60px 6%;
             }
         }
     </style>
@@ -142,116 +367,302 @@
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- NAVIGATION -->
 
-    <section id="home" class="hero">
-        <h1>Hi, I'm <span>Aravind Reddy</span></h1>
+<nav>
 
-        <p>
+    <div class="logo">
+        AR <span>Aravind Reddy</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            HELLO, I'M
+        </div>
+
+        <h1>
+            Aravind <span>Reddy</span>
+        </h1>
+
+        <p class="headline">
             BCA (Artificial Intelligence) Student |
-            Aspiring Software Developer
+            Python | SQL | AI | Web Development |
+            Open to Entry-Level Opportunities and Internship
         </p>
 
-        <div>
-            <a class="btn" href="#projects">View My Projects</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
+        <p class="description">
+            I am an aspiring Software Developer passionate about
+            programming, web development, artificial intelligence
+            and continuous learning. I am currently building my
+            technical skills and developing practical projects.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+
         </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
+        <div class="social">
 
-        <div class="about">
+            <!-- Replace these links with your real profiles -->
+
+            <a href="https://www.linkedin.com/"
+               target="_blank">
+                in
+            </a>
+
+            <a href="https://github.com/Aravind-rgb007"
+               target="_blank">
+                GH
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        About Me
+    </h2>
+
+    <p class="section-subtitle">
+        A BCA (Artificial Intelligence) student preparing
+        for a career in software development.
+    </p>
+
+    <div class="card">
+
+        <p>
+            I am Aravind Reddy, currently pursuing BCA
+            (Artificial Intelligence) at SDHR Degree and PG
+            College from 2024 to 2027.
+        </p>
+
+        <br>
+
+        <p>
+            I have an interest in software development,
+            Python programming, SQL, artificial intelligence
+            and web development. I enjoy learning new
+            technologies and improving my problem-solving
+            skills through practical projects.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">
+        Technical Skills
+    </h2>
+
+    <p class="section-subtitle">
+        Technologies I am currently learning and working with.
+    </p>
+
+    <div class="skills">
+
+        <div class="skill">C</div>
+
+        <div class="skill">Python</div>
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">SQL</div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2 class="section-title">
+        Education
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                BCA (Artificial Intelligence)
+            </h3>
+
             <p>
-                I am a BCA (Artificial Intelligence) student at
-                SDHR Degree and PG College, currently pursuing my degree
-                from 2024 to 2027. I am interested in software development
-                and enjoy learning programming, web technologies and
-                problem-solving.
+                SDHR Degree and PG College
             </p>
-        </div>
-    </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-
-        <div class="skills">
-            <div class="skill">C</div>
-            <div class="skill">Python</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-
-        <div class="education">
-            <h3>BCA (Artificial Intelligence)</h3>
-            <p>SDHR Degree and PG College</p>
-            <p>2024 – 2027</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Personal Portfolio Website</h3>
             <p>
-                A responsive personal portfolio website created using
-                HTML, CSS and JavaScript to showcase my skills,
-                education and future projects.
+                2024 – 2027
             </p>
-            <br>
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
         </div>
 
-        <div class="project">
-            <h3>More Projects Coming Soon</h3>
+        <div class="card">
+
+            <h3>
+                Career Goal
+            </h3>
+
             <p>
-                I am currently working on developing more projects
-                to improve my programming and software development skills.
+                Aspiring Software Developer
             </p>
+
+            <p>
+                Interested in software development,
+                AI and web technologies.
+            </p>
+
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
+    </div>
 
-        <div class="about">
-            <p>
-                I am open to internships, learning opportunities and
-                entry-level software development opportunities.
-            </p>
+</section>
 
-            <br>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        Projects
+    </h2>
+
+    <p class="section-subtitle">
+        Practical projects I have built and am currently developing.
+    </p>
+
+
+    <div class="project-card">
+
+        <h3>
+            Personal Portfolio Website
+        </h3>
+
+        <p>
+            A responsive personal portfolio website created
+            to showcase my education, technical skills,
+            projects and career interests.
+        </p>
+
+        <p class="tech">
+            <strong>Technologies:</strong>
+            HTML, CSS, JavaScript, GitHub Pages
+        </p>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <h3>
+            Future Project — Expense Tracker
+        </h3>
+
+        <p>
+            A beginner-friendly application planned for
+            tracking income and expenses while improving
+            my JavaScript and programming skills.
+        </p>
+
+        <p class="tech">
+            <strong>Status:</strong>
+            Coming Soon
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="contact-box">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p>
+            I am open to internships, entry-level opportunities
+            and learning opportunities in software development.
+        </p>
+
+        <div class="buttons">
+
+            <!-- Replace with your actual LinkedIn URL -->
 
             <a class="btn"
                href="https://www.linkedin.com/"
                target="_blank">
-               LinkedIn
+                LinkedIn
             </a>
 
-            <a class="btn secondary"
-               href="https://github.com/"
+            <a class="btn btn-outline"
+               href="https://github.com/Aravind-rgb007"
                target="_blank">
-               GitHub
+                GitHub
             </a>
-        </div>
-    </section>
 
-    <footer>
-        © 2026 Aravind Reddy | Portfolio
-    </footer>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Aravind Reddy | BCA (Artificial Intelligence)
+
+</footer>
+
 
 </body>
-      </html>
+    </html>
